@@ -1,5 +1,6 @@
 import path from 'path';
 
+// Não funciona com export default porque ainda não tem suporte a typescript
 module.exports = {
     client: 'sqlite3',
     connection: {

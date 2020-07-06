@@ -2,7 +2,7 @@ import knex from '../database/connection';
 import { Request, Response } from 'express';
 
 class ItemController {
-    async index(request: Request, response: Response) { // devido ao usu
+    async index(request: Request, response: Response) { // devido ao uso do await, é preciso usar o async
         const items = await knex('items').select('*'); //com o await o javascript espera o termino da execução para então continuar o restante do código
     
         const serializedItems = items.map(item => {
